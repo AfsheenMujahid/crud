@@ -11,8 +11,8 @@ const mongodbURI = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.
 @${process.env.CLUSTER_NAME}/${process.env.DATABASE_NAME}?retryWrites=true&w=majority`;
 
 const client = new MongoClient(mongodbURI);
-const database = client.db('teleshop');
-const productsCollection = database.collection('products');
+const database = client.db('CRUD');
+const productsCollection = database.collection('crudinfo');
 
 const connectToMongoDB = async () => {
   try {
