@@ -39,7 +39,7 @@ connectToMongoDB();
 
 const app = express();
 app.use(express.json());
-app.use(cors(["http://localhost:2000",]));
+app.use(cors(["http://localhost:3000",]));
 app.use(morgan('combined'));
 
 //app.get("/", (req, res) => {
@@ -206,7 +206,7 @@ app.use((req, res) => {
   res.status(404).send("not found");
 })
 
-const port = process.env.PORT || 2000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
