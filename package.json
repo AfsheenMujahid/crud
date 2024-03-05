@@ -4,7 +4,7 @@
     "axios": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "express": "^4.18.3",
+    "express": "^4.18.2",
     "mongodb": "^5.8.0",
     "mongoose": "^7.4.4",
     "mongosh": "^1.10.1",
@@ -12,7 +12,6 @@
     "nanoid": "^4.0.2",
     "node": "^20.11.1",
     "nodemon": "^3.0.3",
-    "path": "^0.12.7",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
@@ -22,7 +21,7 @@
   "name": "crud-info-forms",
   "description": "Crud-Operations",
   "version": "1.0.0",
-  "main": "script.mjs",
+  "main": "server.mjs",
   "scripts": {
     "start": "node server.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -31,7 +30,7 @@
     "node": "20.x.x"
   },
   "keywords": [],
-  "author": "AfsheenMujahid",
+  "author": "CRUD",
   "license": "ISC",
   "type": "module"
-}
+} 
