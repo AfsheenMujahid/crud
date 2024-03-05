@@ -24,7 +24,7 @@ const connectToMongoDB = async () => {
   }
 };
 
-//connectToMongoDB();
+connectToMongoDB();
 
 //client.connect((err) => {
 //if (err) {
