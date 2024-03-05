@@ -24,17 +24,17 @@ const connectToMongoDB = async () => {
   }
 };
 
-connectToMongoDB();
+// connectToMongoDB();
 
-client.connect((err) => {
-if (err) {
- console.error("Error connecting to MongoDB:", err);
- console.log("MongoDB not connected");
-} else {
-   console.log("Connection to MongoDB successful");
-  console.log("MongoDB connected");
-}
-});
+// client.connect((err) => {
+// if (err) {
+//  console.error("Error connecting to MongoDB:", err);
+//  console.log("MongoDB not connected");
+// } else {
+//    console.log("Connection to MongoDB successful");
+//   console.log("MongoDB connected");
+// }
+// });
 
 const app = express();
 app.use(express.json());
