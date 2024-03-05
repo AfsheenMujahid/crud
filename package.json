@@ -22,7 +22,7 @@
   "name": "crud-info-forms",
   "description": "Crud-Operations",
   "version": "1.0.0",
-  "main": "crud.mjs",
+  "main": "app.mjs",
   "scripts": {
     "start": "node server.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
