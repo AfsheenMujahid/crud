@@ -7,7 +7,8 @@ import cors from 'cors'
 import './config/index.mjs'
 import path from "path";
 const __dirname = path.resolve();
-const mongodbURI = `mongodb+srv://AfsheenMujahid:AAA12345nnn@cluster0.x9vgkks.mongodb.net/CRUD?retryWrites=true&w=majority&appName=Cluster0`;
+const mongodbURI = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}
+@${process.env.CLUSTER_NAME}/${process.env.DATABASE_NAME}?retryWrites=true&w=majority`;
 
 const client = new MongoClient(mongodbURI);
 const database = client.db('CRUD');
@@ -24,21 +25,21 @@ const connectToMongoDB = async () => {
   }
 };
 
-// connectToMongoDB();
+//connectToMongoDB();
 
-// client.connect((err) => {
-// if (err) {
+//client.connect((err) => {
+//if (err) {
 //  console.error("Error connecting to MongoDB:", err);
 //  console.log("MongoDB not connected");
 // } else {
 //    console.log("Connection to MongoDB successful");
 //   console.log("MongoDB connected");
 // }
-// });
+//});
 
 const app = express();
 app.use(express.json());
-app.use(cors(["http://localhost:3000",]));
+app.use(cors(["http://localhost:3000"]));
 app.use(morgan('combined'));
 
 //app.get("/", (req, res) => {
