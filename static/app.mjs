@@ -9,7 +9,7 @@ document.querySelector("#ProductForm")
         const description = document.querySelector('#description').value;
 
         try {
-            const resp = await axios.post(`http://localhost:2000/product`, {
+            const resp = await axios.post(`http://localhost:3000/product`, {
                 name: name,
                 brand,
                 model,
@@ -35,7 +35,7 @@ document.querySelector("#ProductForm")
 const getAllProducts = async () => {
     try {
 
-        const resp = await axios.get("http://localhost:2000/products");
+        const resp = await axios.get("http://localhost:3000/products");
         console.log("resp: ", resp.data.data);
 
         let productsDiv = document.querySelector("#products")
@@ -131,7 +131,7 @@ window.cancelEdit = (productId) => {
 window.deleteProduct = async (id) => {
     try {
         console.log("id: ", id);
-        const resp = await axios.delete(`http://localhost:2000/product/${id}`);
+        const resp = await axios.delete(`http://localhost:3000/product/${id}`);
         console.log("resp: ", resp.data);
         getAllProducts();
 
