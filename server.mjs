@@ -4,11 +4,10 @@ import express from "express";
 import { MongoClient, ObjectId } from "mongodb"
 import morgan from 'morgan';
 import cors from 'cors'
-import './config/index.mjs'
+//import './config/index.mjs'
 import path from "path";
 const __dirname = path.resolve();
-const mongodbURI = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}
-@${process.env.CLUSTER_NAME}/${process.env.DATABASE_NAME}?retryWrites=true&w=majority`;
+const mongodbURI = `mongodb+srv://AfsheenMujahid:AAA12345nnn@cluster0.x9vgkks.mongodb.net/CRUD?retryWrites=true&w=majority&appName=Cluster0`;
 
 const client = new MongoClient(mongodbURI);
 const database = client.db('CRUD');
