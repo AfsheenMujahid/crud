@@ -6,27 +6,16 @@ import morgan from 'morgan';
 import cors from 'cors'
 //import './config/index.mjs'
 import path from "path";
+import { connectToMongoDB } from "./connectToMongoDB.mjs";
 const __dirname = path.resolve();
 const mongodbURI = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}
 @${process.env.CLUSTER_NAME}/${process.env.DATABASE_NAME}?retryWrites=true&w=majority`;
 
-const client = new MongoClient(mongodbURI);
+export const client = new MongoClient(mongodbURI);
 const database = client.db('CRUD');
 const productsCollection = database.collection('crudinfo');
 
-const connectToMongoDB = async () => {
-  try {
-    await client.connect();
-    console.log("Connection to MongoDB successful");
-    console.log("MongoDB connected");
-  } catch (err) {
-    console.error("Error connecting to MongoDB:", err);
-    console.log("MongoDB not connected");
-  }
-};
-
-connectToMongoDB();
-
+ 
 //client.connect((err) => {
 //if (err) {
 //  console.error("Error connecting to MongoDB:", err);
