@@ -7,7 +7,7 @@ import cors from 'cors'
 //import './config/index.mjs'
 import path from "path";
 const __dirname = path.resolve();
-const mongodbURI = `mongodb+srv://AfsheenMujahid:AAA12345nnn@cluster0.x9vgkks.mongodb.net/CRUD?retryWrites=true&w=majority&appName=Cluster0`;
+const mongodbURI = `mongodb+srv://AfsheenMujahid:<password>@cluster0.x9vgkks.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
 const client = new MongoClient(mongodbURI);
 const database = client.db('CRUD');
