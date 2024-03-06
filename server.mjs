@@ -195,33 +195,8 @@ app.use((req, res) => {
   res.status(404).send("not found");
 })
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
-
-
-
-const mongoose = require('mongoose');
-
-// Connection URI
-const uri = 'mongodb://localhost:27017/CRUD';
-
-// Connect to MongoDB
-mongoose.connect(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-// Get the default connection
-const db = mongoose.connection;
-
-// Bind connection to error event
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
-// Bind connection to open event
-db.once('open', () => {
-  console.log('Connected to MongoDB');
-});
-
 
