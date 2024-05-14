@@ -1,55 +1,3 @@
-
-function validateForm() {
-    var name = document.getElementById('name').value;
-    var brand = document.getElementById('brand').value;
-    var model = document.getElementById('model').value;
-    var price = document.getElementById('price').value;
-    var description = document.getElementById('description').value;
-
-    var nameError = document.getElementById('nameError');
-    var brandError = document.getElementById('brandError');
-    var modelError = document.getElementById('modelError');
-    var priceError = document.getElementById('priceError');
-    var descriptionError = document.getElementById('descriptionError');
-
-    if (name === '') {
-        nameError.style.display = 'block';
-        return false;
-    } else {
-        nameError.style.display = 'none';
-    }
-
-    if (brand === '') {
-        brandError.style.display = 'block';
-        return false;
-    } else {
-        brandError.style.display = 'none';
-    }
-
-    if (model === '') {
-        modelError.style.display = 'block';
-        return false;
-    } else {
-        modelError.style.display = 'none';
-    }
-
-    if (price === '') {
-        priceError.style.display = 'block';
-        return false;
-    } else {
-        priceError.style.display = 'none';
-    }
-
-    if (description === '') {
-        descriptionError.style.display = 'block';
-        return false;
-    } else {
-        descriptionError.style.display = 'none';
-    }
-
-    return true; // Form will be submitted if all fields are filled
-}
-
 function clearForm() {
     document.getElementById('name').value = '';
     document.getElementById('brand').value = '';
@@ -81,4 +29,23 @@ function searchData() {
             }
         }
     }
+}
+function validateForm() {
+    var name = document.getElementById("name").value;
+    var brand = document.getElementById("brand").value;
+    var model = document.getElementById("model").value;
+    var price = document.getElementById("price").value;
+    var description = document.getElementById("description").value;
+
+    document.getElementById("nameError").innerText = name ? "" : "Please fill in this field";
+    document.getElementById("brandError").innerText = brand ? "" : "Please fill in this field";
+    document.getElementById("modelError").innerText = model ? "" : "Please fill in this field";
+    document.getElementById("priceError").innerText = price ? "" : "Please fill in this field";
+    document.getElementById("descriptionError").innerText = description ? "" : "Please fill in this field";
+
+    if (name == "" || brand == "" || model == "" || price == "" || description == "") {
+        return false;
+    }
+
+    return true;
 }
